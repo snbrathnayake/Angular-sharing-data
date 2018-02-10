@@ -11,7 +11,7 @@ import { Data } from '@angular/router/src/config';
 export class ParentAppComponent implements OnInit {
 
   private msg: string;
-  private current_date: any;
+  private year: any;
   private ready: boolean;
 
   constructor() {}
@@ -19,7 +19,7 @@ export class ParentAppComponent implements OnInit {
   ngOnInit() {
     console.info('ParentApp:show');
     this.msg = 'Hello sample text from parent.';
-    this.current_date = new Date().getFullYear();
+    this.year = new Date().getFullYear();
     this.ready = true;
   }
 
