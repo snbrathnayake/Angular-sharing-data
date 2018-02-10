@@ -24,7 +24,6 @@ export class ChildAppComponent implements OnInit {
   private programes:string[];
   public childName:string = 'SAMEERA';
 
-
   constructor() {
   
   }
