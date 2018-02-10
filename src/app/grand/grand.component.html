@@ -1,0 +1,24 @@
+<app-child-app (messageEvent)="receiveMessage($event)" (file)="receiveProgrames($event)" [isReadyGrand]="ready"></app-child-app>
+<br/>
+
+<div class="message-div">
+  <small>This is Grand componet div 1</small><br/>
+  {{ messageChild }}
+</div>
+
+<div class="message-div">
+    <small>This is Grand componet div 2</small><br/>
+    <ul>
+        <li *ngFor="let item of lang">
+           {{ item }}
+        </li>
+      </ul>
+</div>
+
+<br/>
+
+
+{{ testdata == true }}
+ <span *ngIf="testvar == false ">
+ {{ testdata }}
+</span> 

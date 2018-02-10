@@ -1,7 +1,7 @@
-<p>
-  parent-app works!
-</p>
 
-<br>
+<!-- used child componet and inject some values from that  -->
+<app-child-app [datetime]="year" [message]="msg" [isReadyParent]="readyParent" [description]="description" [titleInput] = "defaultTitle"></app-child-app>
 
-<button type="button" class="btn btn-info" (click)="back()">Go to Previous </button>
+
+
+

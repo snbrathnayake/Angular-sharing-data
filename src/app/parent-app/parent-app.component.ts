@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , Output ,EventEmitter } from '@angular/core';
 import { Route } from '@angular/compiler/src/core';
 import { Routes, Router } from '@angular/router';
+import { Data } from '@angular/router/src/config';
 
 @Component({
   selector: 'app-parent-app',
@@ -9,16 +10,31 @@ import { Routes, Router } from '@angular/router';
 })
 export class ParentAppComponent implements OnInit {
 
-  constructor(private routes:Router) {
-    
-   }
+  private msg: string;
+  private year: any;
+  private readyParent: boolean;
+  private description: string;
+  private defaultTitle: string;
+
+  constructor() {}
 
   ngOnInit() {
     console.info('ParentApp:show');
+    
+    this.defaultTitle = 'New Title';
+    this.msg = 'Hello sample text from parent.';
+    this.year = new Date().getFullYear();
+    this.readyParent = true;
+    this.description = `
+    The standard chunk of Lorem Ipsum used since the 1600s is reproduced below for those interested.
+     Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum"
+      by Cicero are also reproduced in their exact original form, 
+      accompanied by English versions from the 1914 translation by H. Rackham.
+    `;
   }
 
-  back(){
-    this.routes.navigate(['/root']);
-  }
+
+
+
 
 }

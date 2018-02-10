@@ -1,0 +1,14 @@
+section {
+    float: left;
+}
+
+.child-element-btn{
+    width: 600px;
+    padding: 10px;
+    background-color: steelblue;
+    color: white;
+}
+.child-element-input{
+    width: 500px;
+    padding: 10px;
+}

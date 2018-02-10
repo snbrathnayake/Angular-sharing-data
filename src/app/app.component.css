@@ -4,3 +4,12 @@
 .outlet{
     padding: 5px;
 }
+.back{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 15px;
+
+
+    
+}
