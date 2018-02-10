@@ -12,12 +12,12 @@ export class ChildAppComponent implements OnInit {
   private static visit: any = 0;
 
   constructor(private routes: Router) {
-    ChildAppComponent.visit++;
-    console.warn('ChildApp:visited = ' + ChildAppComponent.visit);
+
+   
   }
 
   ngOnInit() {
-    console.info('ChildApp:show');
+   
   }
   back() {
     this.routes.navigate(['/root']);
