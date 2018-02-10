@@ -2,6 +2,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { RootComponent } from './root/root.component';
 import { ChildAppComponent } from './child-app/child-app.component';
 import { ParentAppComponent } from './parent-app/parent-app.component';
+import { GrandComponent } from './grand/grand.component';
 
 export const routes: Routes = [
     {
@@ -20,6 +21,10 @@ export const routes: Routes = [
     {
         path: 'child',
         component: ChildAppComponent
+    },
+    {
+        path: 'grand',
+        component: GrandComponent
     },
     
 ]

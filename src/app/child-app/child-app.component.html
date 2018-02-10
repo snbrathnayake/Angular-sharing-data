@@ -1,3 +1,19 @@
-<div class="child-element" *ngIf="ready">
-  <h4>Hi  message posted on  <b>{{ datetime }} </b> about  <b>{{ message }} </b> </h4>
+<div class="child-element" *ngIf="readyParent">
+  <h4>Hi  message posted on  <b>{{ datetime }} </b> about  <b>{{ message }} </b> </h4><br/>
+  <p>{{ description }}</p>
+</div>
+
+<br/>
+
+<div class="child-element-btn" *ngIf="readyGrand">
+  <small>This the child componet   : </small>
+  <button type="button" class="btn btn-success" (click)="sendMessage()">Send Message</button>
+  <button type="button" class="btn btn-warning" (click)="sendProgrames()">Send Programes List</button>
+</div>
+
+
+<br/>
+<div class="form-group child-element-input">
+    <label for="usr">Application information : <b>{{ titleInput}} </b> </label>
+    <input type="text"  [(ngModel)]="titleInput" class="form-control" id="usr">
 </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input , Output , EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 import { Data } from '@angular/router/src/config';
 
@@ -13,15 +13,45 @@ export class ChildAppComponent implements OnInit {
 
   @Input() message: string;
   @Input() datetime: Data;
-  @Input() isReady: boolean = false;
+  @Input() description: string;
+  @Input() isReadyParent: boolean = false;
+  @Input() isReadyGrand: boolean = false;
+  @Input() titleInput: string;
 
-  constructor() {}
+  @Output() messageEvent = new EventEmitter<string>();
+  @Output() file = new EventEmitter<string[]>();
 
-  ngOnInit() {}
+  private programes:string[];
+  public childName:string = 'SAMEERA';
 
 
-  get ready(){
-    return this.isReady;
+  constructor() {
+  
   }
 
+  ngOnInit() {
+    // this.childName = 'SAMEERA';
+    this.programes = ['java','PHP','C#','Angular 5'];
+    
+  }
+
+
+  get readyParent(){
+    return this.isReadyParent;
+  }
+  get readyGrand(){
+    return this.isReadyGrand;
+  }
+
+  public sendMessage(){
+    this.messageEvent.emit('HYE ! Grand Father this coming from child app');
+  }
+
+  public sendProgrames(){
+    this.file.emit(this.programes);
+  }
+
+  public hello(): string{
+    return 'Hello Angualar'
+  }
 }
