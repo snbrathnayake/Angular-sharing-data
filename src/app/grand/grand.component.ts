@@ -12,7 +12,7 @@ export class GrandComponent implements OnInit ,AfterViewInit {
   private messageChild: string;
   private ready: boolean;
   private lang:string [];
-  private testvar:string;
+  private testdata:string;
 
   // access child properties
   @ViewChild(ChildAppComponent) child;
@@ -20,7 +20,7 @@ export class GrandComponent implements OnInit ,AfterViewInit {
   constructor() { }
 
   ngAfterViewInit() {
-    this.testvar = this.child.childName;
+    this.testdata = this.child.childName;
 
     console.log(this.child.childName);
     console.log(this.child.hello());
