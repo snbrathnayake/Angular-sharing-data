@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular Sharing Data among the componets';
+
+  constructor(){
+    console.warn('AppComponet called ');
+  }
 }
