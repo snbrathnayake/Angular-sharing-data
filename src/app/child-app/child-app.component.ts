@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { Data } from '@angular/router/src/config';
+
 
 
 @Component({
@@ -9,18 +11,17 @@ import { Router } from '@angular/router';
 })
 export class ChildAppComponent implements OnInit {
 
-  private static visit: any = 0;
+  @Input() message: string;
+  @Input() datetime: Data;
+  @Input() isReady: boolean = false;
 
-  constructor(private routes: Router) {
-    ChildAppComponent.visit++;
-    console.warn('ChildApp:visited = ' + ChildAppComponent.visit);
-  }
+  constructor() {}
 
-  ngOnInit() {
-    console.info('ChildApp:show');
-  }
-  back() {
-    this.routes.navigate(['/root']);
+  ngOnInit() {}
+
+
+  get ready(){
+    return this.isReady;
   }
 
 }

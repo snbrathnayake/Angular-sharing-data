@@ -1,5 +1,3 @@
-<p>
-  child-app works!
-</p>
-<br>
-<button type="button" class="btn btn-info" (click)="back()">Go to Previous</button>
+<div class="child-element" *ngIf="ready">
+  <h4>Hi  message posted on  <b>{{ datetime }} </b> about  <b>{{ message }} </b> </h4>
+</div>

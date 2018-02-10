@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Route } from '@angular/compiler/src/core';
 import { Routes, Router } from '@angular/router';
+import { Data } from '@angular/router/src/config';
 
 @Component({
   selector: 'app-parent-app',
@@ -9,16 +10,18 @@ import { Routes, Router } from '@angular/router';
 })
 export class ParentAppComponent implements OnInit {
 
-  constructor(private routes:Router) {
-    
-   }
+  private msg: string;
+  private current_date: any;
+  private ready: boolean;
+
+  constructor() {}
 
   ngOnInit() {
     console.info('ParentApp:show');
+    this.msg = 'Hello sample text from parent.';
+    this.current_date = new Date().getFullYear();
+    this.ready = true;
   }
 
-  back(){
-    this.routes.navigate(['/root']);
-  }
 
 }
