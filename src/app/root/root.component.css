@@ -1,0 +1,14 @@
+ul>li {
+    float: left;
+    margin-right: 2px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
