@@ -13,7 +13,7 @@
 
 
 <br/>
-<div class="form-group child-element-input">
+<div class="form-group child-element-input" *ngIf="readyParent">
     <label for="usr">Application information : <b>{{ titleInput}} </b> </label>
     <input type="text"  [(ngModel)]="titleInput" class="form-control" id="usr">
 </div>
