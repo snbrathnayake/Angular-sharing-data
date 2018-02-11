@@ -9,6 +9,7 @@ import { ParentAppComponent } from './parent-app/parent-app.component';
 import { Routing } from './app.routes';
 import { RouterModule } from '@angular/router';
 import { GrandComponent } from './grand/grand.component';
+import { DataService } from './shared/data.service';
 
 
 @NgModule({
@@ -25,7 +26,7 @@ import { GrandComponent } from './grand/grand.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

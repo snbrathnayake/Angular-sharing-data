@@ -1,6 +1,7 @@
 import { Component, OnInit, Input , Output , EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 import { Data } from '@angular/router/src/config';
+import { DataService } from '../shared/data.service';
 
 
 
@@ -10,6 +11,9 @@ import { Data } from '@angular/router/src/config';
   styleUrls: ['./child-app.component.css']
 })
 export class ChildAppComponent implements OnInit {
+ 
+  static attempt: number = 1;
+  
 
   @Input() message: string;
   @Input() datetime: Data;
@@ -23,14 +27,20 @@ export class ChildAppComponent implements OnInit {
 
   private programes:string[];
   public childName:string = 'SAMEERA';
+  private behaviourMsg;
+  readyChild: boolean = true;
 
-  constructor() {
+  constructor(private _data:DataService) {
   
   }
 
   ngOnInit() {
     // this.childName = 'SAMEERA';
+
     this.programes = ['java','PHP','C#','Angular 5'];
+    this._data.currentMessage.subscribe(message => {
+      this.behaviourMsg = message;
+    });
     
   }
 
@@ -52,5 +62,10 @@ export class ChildAppComponent implements OnInit {
 
   public hello(): string{
     return 'Hello Angualar'
+  }
+
+  public newMessage(): void{
+
+    this._data.changeMessage(ChildAppComponent.attempt ++);
   }
 }

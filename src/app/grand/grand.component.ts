@@ -13,7 +13,7 @@ export class GrandComponent implements OnInit ,AfterViewInit {
   private ready: boolean;
   private lang:string [];
   private testdata:string;
-
+  readyChild: boolean = false;
   // access child properties
   @ViewChild(ChildAppComponent) child;
 
