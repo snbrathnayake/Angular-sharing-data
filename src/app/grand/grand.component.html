@@ -17,8 +17,13 @@
 
 <br/>
 
+<div class="behaviour-msg" *ngIf="readyChild">
+  <h5>{{ behaviourMsg }}</h5>
+</div>
+<br>
 
 {{ testdata == true }}
  <span *ngIf="testvar == false ">
  {{ testdata }}
 </span> 
+

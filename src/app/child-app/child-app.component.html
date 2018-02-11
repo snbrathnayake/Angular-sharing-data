@@ -11,9 +11,14 @@
   <button type="button" class="btn btn-warning" (click)="sendProgrames()">Send Programes List</button>
 </div>
 
-
 <br/>
-<div class="form-group child-element-input">
+<div class="form-group child-element-input" *ngIf="readyParent">
     <label for="usr">Application information : <b>{{ titleInput}} </b> </label>
     <input type="text"  [(ngModel)]="titleInput" class="form-control" id="usr">
 </div>
+
+<div class="behaviour-msg" *ngIf="readyChild">
+  <h5>{{ behaviourMsg }}</h5><br>
+  <button type="button" class="btn btn-danger" (click)="newMessage()">new brodcast message</button>
+</div>
+

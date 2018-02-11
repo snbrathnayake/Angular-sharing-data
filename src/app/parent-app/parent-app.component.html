@@ -2,6 +2,6 @@
 <!-- used child componet and inject some values from that  -->
 <app-child-app [datetime]="year" [message]="msg" [isReadyParent]="readyParent" [description]="description" [titleInput] = "defaultTitle"></app-child-app>
 
-
-
-
+<div class="behaviour-msg" *ngIf="readyChild">
+    <h5>{{ behaviourMsg }}</h5>
+  </div>

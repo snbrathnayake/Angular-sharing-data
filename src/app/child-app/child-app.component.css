@@ -12,3 +12,17 @@ section {
     width: 500px;
     padding: 10px;
 }
+
+.behaviour-msg{
+    padding: 10px;
+    width: 400px;
+    border: 1px dotted slategray;
+
+}
+
+.behaviour-msg > h5{
+    padding: 12px;
+    width: 40px;
+    border-radius: 50%;
+    background-color:yellowgreen;  
+}
